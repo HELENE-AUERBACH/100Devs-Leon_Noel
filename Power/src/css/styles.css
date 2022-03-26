@@ -1,0 +1,149 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+  color: black;
+}
+
+h1 {
+  color: rgb(123, 180, 161);
+}
+
+p {
+  font-size: 130%;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* On mobile, all sections stack  */
+main {
+  width: 100%;
+  display: block;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  margin: 1rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+#bachelorettes {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+}
+
+#bachelor-code {
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+}
+
+h1,
+h2,
+button {
+  display: block;
+  text-align: center;
+}
+
+h1,
+h2,
+p {
+  width: 100%;
+}
+
+h1 {
+  margin: 1rem auto;
+}
+
+button {
+  width: auto;
+  margin: 0 auto;
+  /* clear: both; */
+}
+
+img {
+  height: auto;
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  #bachelorettes {
+    flex-direction: column;
+  }
+
+  img {
+    width: inherit;
+  }
+
+  #private-joke:nth-child(even) {
+    margin: 1rem 0;
+  }
+}
+
+/* On tablet, please make the images not stacked  */
+@media screen and (min-width: 501px) {
+  #bachelorettes {
+    flex-direction: row;
+  }
+
+  img {
+    width: 33.3333%;
+  }
+
+  #bachelor-code {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img:nth-child(even) {
+    margin: 0 1rem;
+  }
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.red {
+  background-color: rgba(250, 40, 20, 1);
+}
+.white {
+  background-color: #f2f2f2;
+}
+
+.hidden {
+  display: none;
+}
